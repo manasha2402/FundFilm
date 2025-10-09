@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project updates</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"> Husky Productions</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pledges.html">Make a Pledge</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="updates.html">Updates</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="py-5">
+      <section class="Updates">
+        <div class="container">
+          <h1 class="mb-5">Project updates</h1>
+          <div class="row g-3">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card">
+                <img
+                  src="Images/film-camera.jpg"
+                  alt="Film camera bought"
+                  class="card-img-top"
+                  style="height: 250px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Purchase of our camera</h5>
+                  <p class="card-text">this is a text to test the card</p>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#cameraUpdateModal"
+                  >
+                    View Update
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card">
+                <img
+                  src="Images/scenary.jpg"
+                  alt="Set location found"
+                  class="card-img-top"
+                  style="height: 250px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Finalized the set location</h5>
+                  <p class="card-text">this is a text to test the card</p>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#scenaryModal"
+                  >
+                    View Update
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card">
+                <img
+                  src="Images/crew.jpg"
+                  alt="Crew members"
+                  class="card-img-top"
+                  style="height: 250px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Full crew</h5>
+                  <p class="card-text">this is a text to test the card</p>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#crewModal"
+                  >
+                    View Update
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div
+      class="modal fade"
+      id="cameraUpdateModal"
+      tabindex="-1"
+      aria-labelledby="cameraUpdateModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cameraUpdateModalLabel">
+              Purchase of our camera
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="Images/camera-modal.jpg"
+              alt="Camera for modal window"
+              class="d-block mx-auto"
+              style="height: 400px; object-fit: cover"
+            />
+            <p>
+              Thanks to your initial fundings, we were able to purchase the
+              camera that we need to make our dream production possible, a Sony
+              PXW-Z200, capable of shooting in 4k.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="scenaryModal"
+      tabindex="-1"
+      aria-labelledby="scenaryModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="scenaryModalLabel">
+              Finalization of set location
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="Images/scenary.jpg"
+              alt="Scenary modal"
+              class="d-block mx-auto"
+              style="height: 400px; object-fit: cover"
+            />
+            <p>
+              Principle photography concluded on our final location, this
+              beutiful landscape that will provide the perfect backdrop and
+              lightning for our climax.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="crewModal"
+      tabindex="-1"
+      aria-labelledby="crewModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="crewModalLabel">Meet the Crew</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="Images/crew.jpg"
+              alt="Crew modal"
+              class="d-block mx-auto"
+              style="height: 400px; object-fit: cover"
+            />
+            <p>
+              Meet our entire crew! These are the people that have committed
+              themselves, their time and their knowledge to make our dream
+              project come to reality! Everyone is excited for the future, and
+              very thankful to the continued support from all your pledges!
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white py-3 text-center">
+      <div class="container">© 2025 Utkarsh Dev. MIT License.</div>
+    </footer>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+</html>
