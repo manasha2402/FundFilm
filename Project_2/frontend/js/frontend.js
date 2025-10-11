@@ -1,7 +1,9 @@
-console.log("Hello world!");
 
 function Updates() {
   const me = {};
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const isAdmin = urlParams.get("admin") === "theSuperSecretAdminKey";
 
   me.showError = ({ msg, res, type = "danger" } = {}) => {
     const main = document.querySelector("main");
@@ -11,6 +13,39 @@ function Updates() {
     alert.innerText = `${msg}: ${res.status} ${res.statusText}`;
     main.prepend(alert);
   };
+
+  me.deleteUpdate = async (id) => {
+    if (!confirm("Are you sure you want to delete this update?")) {
+      return;
+    }
+
+    try {
+      const res = await fetch(`/api/updates/${id}?admin=theSuperSecretAdminKey`, {
+        method: "DELETE",
+      });
+
+      if (res.status === 403) {
+        alert("Forbidden: You do not have permission to delete this update.");
+        return;
+      }
+
+      if (!res.ok) {
+        console.error("Failed to delete update", res.status, res.statusText);
+        me.showError({ msg: "Failed to delete update", res });
+        return;
+      } else {
+        alert("Update deleted successfully.");
+        me.refreshListings();
+      }
+    } catch (err) {
+      console.error("Network error:", err);
+      me.showError({
+        msg: "Network error",
+        res: { status: 0, statusText: err.message },
+      });
+    }
+  };
+
 
   const renderUpdates = (updates) => {
     const updatesDiv = document.getElementById("updates");
@@ -33,6 +68,12 @@ function Updates() {
                   >
                     View Update
                   </button>
+                  ${isAdmin ? `
+                    <button
+                      type="button"
+                      class="btn btn-danger ms-2"
+                      onclick="myUpdates.deleteUpdate('${update._id}')"
+                      >Delete</button>` : ''}
                   
                     </div>
                 </div>
@@ -91,4 +132,5 @@ function Updates() {
 }
 
 const myUpdates = Updates();
+window.myUpdates = myUpdates;
 myUpdates.refreshListings();
