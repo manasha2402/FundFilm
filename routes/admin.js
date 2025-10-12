@@ -4,7 +4,7 @@ import express from "express";
 const router = express.Router();
 
 router.use(express.urlencoded({ extended: true }));
-router.post("/admin", async (req, res) => {
+router.post("/edit", async (req, res) => {
   if (req.body.password == 123) {
     console.log("Successful password!");
     res.redirect("/admin.html");

@@ -4,7 +4,7 @@ import MyDB from "../db/MyMongoDB.js";
 const router = express.Router();
 
 router.use(express.urlencoded({ extended: true }));
-// NEED TO IMPLEMENT THIS
+
 router.post("/pledges", (req, res) => {
   console.log("Received post request for /api/pledges");
 

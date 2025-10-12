@@ -82,6 +82,37 @@ function MyMongoDB() {
     }
   };
 
+  // Delete pledge by email
+  me.deletePledge = async (deleteEmail) => {
+    const { client, pledges } = connect();
+    try {
+      await pledges.deleteMany({ email: deleteEmail });
+    } catch (error) {
+      console.error("Error deleting pledge", error);
+    } finally {
+      await client.close();
+    }
+  };
+
+  // Update pledge by email
+  me.updatePledge = async (updateEmail, newPledge) => {
+    const { client, pledges } = connect();
+    const filter = { email: updateEmail };
+    const newUpdate = {
+      $set: {
+        pledge: newPledge,
+      },
+    };
+    try {
+      await pledges.updateOne(filter, newUpdate);
+      console.log("Entry was updated");
+    } catch (error) {
+      console.error("Error updating pledge", error);
+    } finally {
+      await client.close();
+    }
+  };
+
   return me;
 }
 
