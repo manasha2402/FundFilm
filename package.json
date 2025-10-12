@@ -1,35 +1,36 @@
 {
-  "name": "project_2",
+  "name": "fundfilm",
   "version": "1.0.0",
-  "description": "",
+  "description": "CS5610 Project 2",
   "main": "backend.js",
+  "type": "module",
   "scripts": {
-    "start": "nodemon backend.js",
+    "start": "node ./node_modules/nodemon/bin/nodemon.js backend.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mm-bertoni/FundFilm.git"
+  },
   "keywords": [],
-  "author": "",
+  "author": "Margaret Bertoni",
   "license": "MIT",
-  "type": "module",
+  "bugs": {
+    "url": "https://github.com/mm-bertoni/FundFilm/issues"
+  },
+  "homepage": "https://github.com/mm-bertoni/FundFilm#readme",
   "devDependencies": {
     "@eslint/js": "^9.37.0",
     "eslint": "^9.37.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-jest": "^29.0.1",
-    "eslint-plugin-prettier": "^5.5.4",
     "globals": "^16.4.0",
     "jest": "^30.2.0",
     "prettier": "^3.6.2"
   },
   "dependencies": {
-    "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "mongodb": "6.20",
-    "multer": "^2.0.2",
     "nodemon": "^3.1.10"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mm-bertoni/FundFilm.git"
   }
 }
