@@ -3,22 +3,22 @@ import MyDB from "../db/MyMongoDB.js";
 
 const router = express.Router();
 
-router.use(express.urlencoded({extended: true}));
+router.use(express.urlencoded({ extended: true }));
 // NEED TO IMPLEMENT THIS
-router.post("/pledges", (req, res)=> {
-    console.log("Received post request for /api/pledges");
-    
-    // Extract data from request body (because its a POST request)
-    const {name, email, pledge, comment} = req.body; 
+router.post("/pledges", (req, res) => {
+  console.log("Received post request for /api/pledges");
 
-
-    // Log to Console
-    console.log("Received This Name: ", name);
-    // Send to Data Base
-    MyDB.addPledge(req.body.name, req.body.email, req.body.pledge, req.body.comment);
-    console.log("Added new pledge");
-    res.redirect("/");
-    /*
+  // Check if existing email, if so, update
+  // Send to Data Base
+  MyDB.addPledge(
+    req.body.name,
+    req.body.email,
+    req.body.pledge,
+    req.body.comment,
+  );
+  console.log("Added new pledge");
+  res.redirect("/");
+  /*
     try{
         const succeed = MyDB.addPledge(name, email, pledge, comment); 
     }  catch (err) {
@@ -26,7 +26,6 @@ router.post("/pledges", (req, res)=> {
         throw err; 
     }
         */
-    // Send success response (?)
-    
+  // Send success response (?)
 });
-export default router; 
+export default router;

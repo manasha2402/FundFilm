@@ -23,22 +23,17 @@ router.get("/pledges", (req,res) => {
 });
 */
 
-
-
-router.get("/pledges", async (req, res)=> {
-    console.log("Received request for /api/pledges");
-    try {
-        const pledges = await MyDB.getPledges();
-        res.json({
-        pledges,
+router.get("/pledges", async (req, res) => {
+  console.log("Received request for /api/pledges");
+  try {
+    const pledges = await MyDB.getPledges();
+    res.json({
+      pledges,
     });
-    } catch (error) {
-        console.error("Error fetching pledges:", error); 
-        res.status(500).json({error: "Internal Server Error", pledges: []});
-    }
-    
-    
+  } catch (error) {
+    console.error("Error fetching pledges:", error);
+    res.status(500).json({ error: "Internal Server Error", pledges: [] });
+  }
 });
-    
 
-export default router; 
+export default router;

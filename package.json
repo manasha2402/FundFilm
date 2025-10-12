@@ -2,7 +2,7 @@
   "name": "fundfilm",
   "version": "1.0.0",
   "description": "CS5610 Project 2",
-  "main": "backend.js",
+  "main": "backend-margaret.js",
   "type": "module",
   "scripts": {
     "start": "node ./node_modules/nodemon/bin/nodemon.js backend.js",
