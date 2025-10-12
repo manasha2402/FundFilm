@@ -1,6 +1,7 @@
 import express from 'express';
 import pledgesRouter from "./routes/pledges.js";
-import submitRouter from "./routes/submit.js";
+import submitRouter from "./routes/submitPledges.js";
+import sumRouter from "./routes/sum.js";
 
 console.log("Initializing the backend...");
 // Initialize express
@@ -11,6 +12,7 @@ app.use(express.static('frontend'));
 app.use("/api/", pledgesRouter);
 
 app.use("/api/", submitRouter);
+app.use("/api/", sumRouter );
 
 // CALL GET TO >>>
 
