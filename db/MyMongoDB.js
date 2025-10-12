@@ -12,6 +12,7 @@ function MyMongoDB(){
         console.log("Connected with Mongo");
         return {client , pledges}; 
     };
+
     
     // Get Pledges to Load
     me.getPledges = async (query = {}) => {
@@ -27,6 +28,40 @@ function MyMongoDB(){
             await client.close(); // Close client after get info
         }
        
+    }
+
+    // Get summary amount of pledges
+    me.sumPledges = async (query = {}) => {
+        // connect to db
+        const {client, pledges } = connect();
+        try {
+            //const totalPledges = await pledges.countDocuments(query);
+            const sumPledges = await pledges.aggregate([{
+                $group: {
+                    _id: null,
+                    total: {$sum: '$pledge'}
+                }
+            }]).toArray();
+
+            return sumPledges[0].total;
+
+        } catch (error) {
+            console.error("There was an error in summarizing", error);
+        } finally {
+            await client.close();
+        }
+    }
+
+    me.totalPledges = async (query = {})=> {
+        const {client, pledges} = connect(); 
+        try {
+            const totalPledges = await pledges.countDocuments(query);
+            return totalPledges; 
+        } catch (error) {
+            console.error("There was an error in summarizing", error);
+        } finally {
+            await client.close();
+        }
     }
 
     // Add New Pledge

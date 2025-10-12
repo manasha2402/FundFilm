@@ -28,7 +28,7 @@
                 </div>
             </div>
         </nav>
-        
+        <!--About Section-->
         <div class="row">
             <div class = "col-6">
                 <h2>About Husky Productions</h2>
@@ -41,13 +41,37 @@
             </div>
         </div>
 
+        <!--PLEDGE TOTAL SECTION TBD-->
+        <h2>Progress</h2>
+        <h3>Goal: $100000</h3>
+        <!--RAISED-->
+        <div id="raised"></div>
+        <!--Total Pledges-->
+        <div id="pledgeCount"></div>
+
+        <!--Latest Pledge Section-->
         <section>
             <div class= "row">
-                <h2>Pledges</h2>
+                <h2>Latest Pledges</h2>
                 <div id="pledges"></div>
                 
             </div>
         </section>
+
+        <!--Admin Edit Section-->
+        <footer>
+            <div class="row">
+                <form action="/api/edit" method="post">
+                    <div class="mb-3">
+                        <label class="form-label" for="password">Admin Password</label>
+                        <input type="password" class="form-control" name="password" required>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-primary" type="submit">Enter</button>
+                    </div>
+                </form>
+            </div>
+        </footer>
 
 
     </div>
