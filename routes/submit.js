@@ -5,8 +5,8 @@ const router = express.Router();
 
 router.use(express.urlencoded({extended: true}));
 // NEED TO IMPLEMENT THIS
-router.post("/submittedPledge", (req, res)=> {
-    console.log("Received request for /api/submittedPledge");
+router.post("/pledges", (req, res)=> {
+    console.log("Received post request for /api/pledges");
     
     // Extract data from request body (because its a POST request)
     const {name, email, pledge, comment} = req.body; 
@@ -17,6 +17,7 @@ router.post("/submittedPledge", (req, res)=> {
     // Send to Data Base
     MyDB.addPledge(req.body.name, req.body.email, req.body.pledge, req.body.comment);
     console.log("Added new pledge");
+    res.redirect("/");
     /*
     try{
         const succeed = MyDB.addPledge(name, email, pledge, comment); 
