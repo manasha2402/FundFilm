@@ -9,7 +9,7 @@ import updateRouter from "./routes/updatePledge.js";
 console.log("Initializing the backend...");
 // Initialize express
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 app.use(express.static("frontend"));
 app.use("/api/", pledgesRouter);
