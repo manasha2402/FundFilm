@@ -12,7 +12,8 @@ function MyMongoDB(){
         console.log("Connected with Mongo");
         return {client , pledges}; 
     };
-
+    
+    // Get Pledges to Load
     me.getPledges = async (query = {}) => {
         // Connect to DB
         const { client, pledges } = connect(); 
@@ -27,6 +28,26 @@ function MyMongoDB(){
         }
        
     }
+
+    // Add New Pledge
+    me.addPledge = async (newName, newEmail, newPledge, newComment) => {
+        const newDoc = {
+            name: newName,
+            email: newEmail,
+            pledge: newPledge,
+            comment: newComment
+        };
+        const {client, pledges} = connect();
+        try {
+            const result = await pledges.insertOne(newDoc);
+        } catch (error) {
+            console.error('Error adding new pledge', error);
+        } finally {
+            await client.close();
+        }
+    }
+
+    
     return me; 
 }
 
