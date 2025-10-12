@@ -1,10 +1,10 @@
 import express from "express";
-import pledgesRouter from "./routes/pledges.js";
-import submitRouter from "./routes/submitPledges.js";
-import sumRouter from "./routes/sum.js";
-import adminRouter from "./routes/admin.js";
-import deleteRouter from "./routes/deletePledge.js";
-import updateRouter from "./routes/updatePledge.js";
+import pledgesRouter from "/FundFilm/routes/pledges.js";
+import submitRouter from "/FundFilm/routes/submitPledges.js";
+import sumRouter from "/FundFilm/routes/sum.js";
+import adminRouter from "/FundFilm/routes/admin.js";
+import deleteRouter from "/FundFilm/routes/deletePledge.js";
+import updateRouter from "/FundFilm/routes/updatePledge.js";
 
 console.log("Initializing the backend...");
 // Initialize express
