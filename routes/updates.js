@@ -2,7 +2,7 @@ import express from "express";
 import multer from "multer";
 import path from "path";
 import fs from "fs";
-import { getDB } from "../db.js";
+import { getDB } from "../db/db.js";
 import { ObjectId } from "mongodb";
 
 const router = express.Router();
