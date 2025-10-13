@@ -4,6 +4,10 @@ A web application that enables independent film directors to share project updat
 Margaret Bertoni
 Utkarsh Dev
 
+# Deployed Link
+https://fundfilm-m5jq.onrender.com/index.html
+
+
 # Class Link
 https://johnguerra.co/classes/webDevelopment_online_fall_2025/
 # Project Objective
@@ -128,16 +132,22 @@ This README was initially generated using Claude Sonnet 4.5 using the following 
 *Help me generate a README file for the FundFilm repo that has the following:   Author Class Link :https://johnguerra.co/classes/webDevelopment_online_fall_2025/ Project Objective : Screenshot  Instructions to build  AI Usage section. and showcasing the following info... [pulled from Project Proposal]:* 
 The build instructions were developed with Github Copilot GPT-5 mini based on the package.json file and the existing README.
 
+The logo was made using Adobe Illustrator's GenAI image generator. Asked it to make a logo for a film production company called "Husky Productions" using the Northeastern University colors.
 
+When deploying to Render, there were deployment errors. Screenshots of the error log were submitted to Claude Sonnet 4.5 to help explain and troubleshoot what was causing the deployment issue. 
+
+Asked Claude Sonnet 4.5 questions about Express and Mongo to better understand routing, like the following question: *As a full stack engineer, help me to learn how to get data out of a form where the submission is a http post type using Express* or *As a full stack engineer, without coding for now, please explain how you can redirect a user to another page using Express* , *As a full stack engineer, can you explain to me how to use the mongo node driver to add a new document using Express routes* 
+
+Initially was revealing the connection key to MongoDB Atlas. Asked Claude to explain what options there were for not revealing the key: *As a fullstack engineer, without coding yet, explain how to access a mongodb collection without publicalyy revealing the password* 
 
 
 
 # Technologies Used
 
 
-Frontend: HTML, CSS, JavaScript
+Frontend: HTML, CSS, Bootstrap, JavaScript
 Backend: Node.js, Express
-Database: MongoDB
+Database: MongoDB (Atlas)
 
 
 # License
