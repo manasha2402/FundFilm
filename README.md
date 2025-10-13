@@ -39,6 +39,18 @@ Film Producers: Monitor donor details and manage communications
 ![alt text](frontend/images/fundFilmScreenshot.png)
 Homepage
 
+![alt text](frontend/images/PledgeForm.png)
+Pledges form
+
+![alt text](frontend/images/updates.png)
+Updates page
+
+![alt text](frontend/images/updates-admin.png)
+Updates page with key
+
+![alt text](frontend/images/update-form.png)
+Add updates form
+
 # Features
 For Directors & Producers
 
