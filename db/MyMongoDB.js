@@ -1,5 +1,4 @@
-import { MongoClient, ServerApiVersion } from "mongodb";
-
+import { MongoClient } from "mongodb";
 function MyMongoDB() {
   const me = {};
   //const URI = process.env.MONGODB_URI || "mongodb://localhost:27017";
@@ -9,13 +8,7 @@ function MyMongoDB() {
 
   const connect = () => {
     // Connect with client
-    const client = new MongoClient(uri, {
-      serverApi: {
-        version: ServerApiVersion.v1,
-        strict: true,
-        deprecationErrors: true,
-      },
-    });
+    const client = new MongoClient(URI);
     const pledges = client.db(DB_NAME).collection(COLLECTION_NAME);
     console.log("Connected with Mongo");
     return { client, pledges };
