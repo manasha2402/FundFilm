@@ -139,14 +139,14 @@ Notes
 # Work Distribution
 Utkarsh
 
-Director and producer user stories implementation
+Director user story implementation
 Private updates form with secure link access
 Updates database schema and API
 Updates display page
 
 Margaret
 
-Pledgee and film fan user stories implementation
+Pledgee user story implementation
 Homepage design and content
 Pledge form and database integration
 Pledges page with fundraising totals
