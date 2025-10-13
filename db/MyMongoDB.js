@@ -3,20 +3,13 @@ import { MongoClient, ServerApiVersion } from "mongodb";
 function MyMongoDB() {
   const me = {};
   //const URI = process.env.MONGODB_URI || "mongodb://localhost:27017";
-  const uri =
-    "mongodb+srv://bertoni:fundFilm25@pledgescluster.ajvbfvz.mongodb.net/?retryWrites=true&w=majority&appName=PledgesCluster";
+  const uri = "mongodb+srv://bertoni:fundFilm25@pledgescluster.ajvbfvz.mongodb.net/?retryWrites=true&w=majority&appName=PledgesCluster";
   const DB_NAME = "FundFilmDB";
   const COLLECTION_NAME = "pledgeData";
 
   const connect = () => {
     // Connect with client
-    const client = new MongoClient(uri, {
-      serverApi: {
-        version: ServerApiVersion.v1,
-        strict: true,
-        deprecationErrors: true,
-      },
-    });
+    const client = new MongoClient(URI);
     const pledges = client.db(DB_NAME).collection(COLLECTION_NAME);
     console.log("Connected with Mongo");
     return { client, pledges };
