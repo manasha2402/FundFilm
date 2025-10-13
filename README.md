@@ -6,11 +6,20 @@ Margaret Bertoni
 Utkarsh Dev
 
 # Deployed Link
-https://fundfilm-m5jq.onrender.com/index.html
-
+[FundFilm website](https://fundfilm-m5jq.onrender.com/index.html)
 
 # Class Link
-https://johnguerra.co/classes/webDevelopment_online_fall_2025/
+[WebDev Class](https://johnguerra.co/classes/webDevelopment_online_fall_2025/)
+
+# Presentaion
+[Slideshow](https://docs.google.com/presentation/d/1UFH4DyQjiIXMOowoZACeb2gC7bVSin55ovFL7kZcklg/edit?usp=sharing)
+
+# Design Document
+[Docs](https://docs.google.com/document/d/1LA_lnzoM07tAgFtU58Ea87D0XSlqcDgwVyYUqaciMsA/edit?usp=sharing)
+
+# Video Demo
+[Demo link](https://youtu.be/i1kSiApBJS0)
+
 # Project Objective
 FundFilm simplifies film fundraising by providing directors with an easy-to-use platform to:
 
