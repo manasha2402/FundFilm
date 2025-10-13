@@ -2,7 +2,7 @@ import express from "express";
 import multer from "multer";
 import path from "path";
 import fs from "fs";
-import { getDB } from "../db/db.js";
+import { getDB } from "../db.js";
 import { ObjectId } from "mongodb";
 
 const router = express.Router();
@@ -19,7 +19,7 @@ const upload = multer({ storage });
 router.get("/updates", async (req, res) => {
   try {
     const db = getDB();
-    const updates = await db.find().toArray();
+    const updates = await db.collection("updateData").find().toArray();
     res.json({ updates });
   } catch (err) {
     console.error("Error in /api/updates:", err);
@@ -32,7 +32,7 @@ router.get("/updates/:id", async (req, res) => {
     const { id } = req.params;
     const db = getDB();
     const update = await db
-      .collection("updates")
+      .collection("updateData")
       .findOne({ _id: new ObjectId(id) });
 
     if (!update) {
@@ -69,7 +69,7 @@ router.post(
         createdAt: new Date(),
       };
 
-      const result = await db.insertOne(updateData);
+      const result = await db.collection("updateData").insertOne(updateData);
 
       res
         .status(201)
@@ -98,7 +98,7 @@ router.put(
       const db = getDB();
 
       const existingUpdate = await db
-        .collection("updates")
+        .collection("updateData")
         .findOne({ _id: new ObjectId(id) });
 
       if (!existingUpdate) {
@@ -139,7 +139,7 @@ router.put(
       }
 
       const result = await db
-        .collection("updates")
+        .collection("updateData")
         .updateOne({ _id: new ObjectId(id) }, { $set: updateData });
 
       res.json({
@@ -164,14 +164,14 @@ router.delete("/updates/:id", async (req, res) => {
     const db = getDB();
 
     const update = await db
-      .collection("updates")
+      .collection("updateData")
       .findOne({ _id: new ObjectId(id) });
     if (!update) {
       return res.status(404).json({ error: "Update not found" });
     }
 
     const result = await db
-      .collection("updates")
+      .collection("updateData")
       .deleteOne({ _id: new ObjectId(id) });
 
     if (update.image) {
