@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Purchase of our camera",
+    "summary": "Thanks to your initial fundings, we were able to purchase the camera that we need to make our dream production possible, a Sony PXW-Z200, capable of shooting in 4k.",
+    "image": "/Images/film-camera.jpg",
+    "modal_image": "/Images/camera-modal.jpg",
+    "modal_id": "cameraUpdateModal"
+  },
+  {
+    "title": "Finalized the set location",
+    "summary": "Principle photography concluded on our final location — this beautiful landscape will provide the perfect backdrop and lighting for our climax.",
+    "image": "/uploads/scenary.jpg",
+    "modal_image": "/uploads/scenary.jpg",
+    "modal_id": "scenaryModal"
+  },
+  {
+    "title": "Meet the Crew",
+    "summary": "Meet our entire crew! These are the people who have committed themselves, their time, and knowledge to make our dream project come true!",
+    "image": "/uploads/crew.jpg",
+    "modal_image": "/uploads/crew.jpg",
+    "modal_id": "crewModal"
+  }
+]
