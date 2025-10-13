@@ -8,7 +8,7 @@ function MyMongoDB() {
 
   const connect = () => {
     // Connect with client
-    const client = new MongoClient(uri));
+    const client = new MongoClient(uri);
     const pledges = client.db(DB_NAME).collection(COLLECTION_NAME);
     console.log("Connected with Mongo");
     return { client, pledges };
