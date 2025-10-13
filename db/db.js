@@ -5,13 +5,13 @@ import { MongoClient } from "mongodb";
 //dotenv.config();
 //console.log("After dotenv.config()");
 
-const uri = process.env.MONGODB_URI;
+const MONGODB_URI = process.env.MONGODB_URI;
 //console.log("MONGO_URI:", uri);
 //console.log("Is MONGO_URI defined?", !!uri);
 //const DB_NAME = "FundFilmDB";
 //const COLLECTION_NAME = "updateData";
 
-const client = new MongoClient(uri);
+const client = new MongoClient(MONGODB_URI);
 
 let db;
 

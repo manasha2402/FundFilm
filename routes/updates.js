@@ -170,9 +170,7 @@ router.delete("/updates/:id", async (req, res) => {
       return res.status(404).json({ error: "Update not found" });
     }
 
-    const result = await db
-      .collection("updateData")
-      .deleteOne({ _id: new ObjectId(id) });
+    await db.collection("updateData").deleteOne({ _id: new ObjectId(id) });
 
     if (update.image) {
       fs.unlink(path.join("uploads", path.basename(update.image)), (err) => {
