@@ -7,6 +7,7 @@ Utkarsh Dev
 
 # Deployed Link
 [FundFilm website](https://fundfilm-m5jq.onrender.com/index.html)
+(Note: Admin password to access pledge edits is 123).
 
 # Class Link
 [WebDev Class](https://johnguerra.co/classes/webDevelopment_online_fall_2025/)
