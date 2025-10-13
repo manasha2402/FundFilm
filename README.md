@@ -176,5 +176,9 @@ Backend: Node.js, Express
 Database: MongoDB (Atlas)
 
 
+# Design Doc
+[text](<Project 2 design doc.pdf>)
+
+
 # License
 MIT
