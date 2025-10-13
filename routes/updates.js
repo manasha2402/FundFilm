@@ -19,7 +19,7 @@ const upload = multer({ storage });
 router.get("/updates", async (req, res) => {
   try {
     const db = getDB();
-    const updates = await db.collection("updates").find().toArray();
+    const updates = await db.find().toArray();
     res.json({ updates });
   } catch (err) {
     console.error("Error in /api/updates:", err);
@@ -69,7 +69,7 @@ router.post(
         createdAt: new Date(),
       };
 
-      const result = await db.collection("updates").insertOne(updateData);
+      const result = await db.insertOne(updateData);
 
       res
         .status(201)
