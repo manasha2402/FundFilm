@@ -1,11 +1,9 @@
-import { MongoClient, ServerApiVersion } from "mongodb";
-
+import { MongoClient } from "mongodb";
 function MyMongoDB() {
   const me = {};
-  //const URI = process.env.MONGODB_URI || "mongodb://localhost:27017";
-  const uri = "mongodb+srv://bertoni:fundFilm25@pledgescluster.ajvbfvz.mongodb.net/?retryWrites=true&w=majority&appName=PledgesCluster";
-  const DB_NAME = "FundFilmDB";
-  const COLLECTION_NAME = "pledgeData";
+  const URI = process.env.MONGODB_URI || "mongodb://localhost:27017";
+  const DB_NAME = "pledgeDatabase";
+  const COLLECTION_NAME = "pledges";
 
   const connect = () => {
     // Connect with client
