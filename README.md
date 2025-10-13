@@ -1,8 +1,7 @@
 # FundFilm- Film Fundraising Platform
 A web application that enables independent film directors to share project updates and receive pledges from supporters without needing technical expertise.
 # Authors
-Margaret Bertoni
-Utkarsh Dev
+echo -e "Margaret Bertoni\nUtkarsh Dev"
 
 # Deployed Link
 https://fundfilm-m5jq.onrender.com/index.html
