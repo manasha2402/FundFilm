@@ -5,6 +5,7 @@ import sumRouter from "./routes/sum.js";
 import adminRouter from "./routes/admin.js";
 import deleteRouter from "./routes/deletePledge.js";
 import updateRouter from "./routes/updatePledge.js";
+import updatesRouter from "./routes/updates.js";
 
 console.log("Initializing the backend...");
 // Initialize express
@@ -19,6 +20,9 @@ app.use("/api/", sumRouter);
 app.use("/api/", adminRouter);
 app.use("/api/", deleteRouter);
 app.use("/api/", updateRouter);
+
+app.use("/api/", updatesRouter);
+app.use("/uploads", express.static("uploads"));
 
 // CALL GET TO >>>
 
