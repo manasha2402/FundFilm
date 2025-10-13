@@ -26,6 +26,8 @@ Prospective Patrons: Learn about films and pledge support
 Film Producers: Monitor donor details and manage communications
 
 # Screenshot
+![alt text](frontend/images/fundFilmScreenshot.png)
+Homepage
 
 # Features
 For Directors & Producers
@@ -67,6 +69,7 @@ Install and run locally
 1. Clone and open project
    - git clone <repo-url>
    - cd FundFilm
+   - The primary branch is *margaret-testing* (we worked on separate branches & tried to merge into main but ran into issues, so ultimately Margaret pulled Utkarsh's files to her branch and manually merged)
 
 2. Install dependencies
    - npm install
