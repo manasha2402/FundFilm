@@ -1,4 +1,6 @@
 import express from "express";
+import {connectDB} from "./db/db.js"; // Addding from utkarsh's
+
 import pledgesRouter from "./routes/pledges.js";
 import submitRouter from "./routes/submitPledges.js";
 import sumRouter from "./routes/sum.js";
@@ -11,6 +13,8 @@ console.log("Initializing the backend...");
 // Initialize express
 const app = express();
 const PORT = process.env.PORT || 4000;
+
+await connectDB();
 
 app.use(express.static("frontend"));
 app.use("/api/", pledgesRouter);
