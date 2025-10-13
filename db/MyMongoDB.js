@@ -2,7 +2,7 @@ import { MongoClient } from "mongodb";
 function MyMongoDB() {
   const me = {};
   //const URI = process.env.MONGODB_URI || "mongodb://localhost:27017";
-  const MONGODB_URI = process.MONGODB_URI;
+  const MONGODB_URI = process.env.MONGODB_URI;
   const DB_NAME = "FundFilmDB";
   const COLLECTION_NAME = "pledgeData";
 
