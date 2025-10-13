@@ -2,13 +2,13 @@ import { MongoClient } from "mongodb";
 function MyMongoDB() {
   const me = {};
   //const URI = process.env.MONGODB_URI || "mongodb://localhost:27017";
-  const uri = process.env.mongdb_uri_mb;
+  const MONGODB_URI = process.MONGODB_URI;
   const DB_NAME = "FundFilmDB";
   const COLLECTION_NAME = "pledgeData";
 
   const connect = () => {
     // Connect with client
-    const client = new MongoClient(uri);
+    const client = new MongoClient(MONGODB_URI);
     const pledges = client.db(DB_NAME).collection(COLLECTION_NAME);
     console.log("Connected with Mongo");
     return { client, pledges };
