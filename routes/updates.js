@@ -90,7 +90,7 @@ router.put(
   async (req, res) => {
     try {
       const adminKey = req.query.admin;
-      if (adminKey !== "theSuperSecretAdminKey") {
+      if (adminKey !== "theSuperSecretAdminKey") { //do not expose
         return res.status(403).json({ error: "Forbidden" });
       }
 
