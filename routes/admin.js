@@ -13,3 +13,12 @@ router.post("/edit", async (req, res) => {
   }
 });
 export default router;
+
+
+
+
+
+//add password to .env file. 
+//save it in a variable and then use it here
+//ADMIN_PASSWORD=123 
+// then change line 8
